@@ -74,8 +74,8 @@
 				<thead>
 					<tr>
 						<th>Name</th>
-						<th>Author</th>
-						<th>ISBN</th>
+						<th>Mitglied</th>
+						<th>Abgabedatum</th>
 					</tr>
 				</thead>
 				<!-- Table body -->

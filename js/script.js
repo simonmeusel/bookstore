@@ -1,4 +1,4 @@
-function searchBooks() {
+function searchBooks () {
   // Search criterias
   var search = "";
 
@@ -10,13 +10,13 @@ function searchBooks() {
   }
   if (author != "") {
     if (search != "") {
-      search = search + "&";
+      search = search + "------";
     }
-    search = search + 'author:"' + author + '"';
+    search = search + "author:" + author;
   }
   if (isbn != "") {
     if (search != "") {
-      search = search + "&";
+      search = search + "------";
     }
     search = search + "isbn:" + isbn;
   }
@@ -31,14 +31,7 @@ function searchBooks() {
       document.getElementById("bookCount").innerHTML = " " + data.totalItems + " Bücher gefunden!";
       var table = "";
       data.items.forEach(function (v, _, _){
-        table = table + "<tr>";
-
-        // Name
-        table = table + "<th>" + v.volumeInfo.title + "</th>";
-        // Author
-        table = table + "<th>" + v.volumeInfo.authors + "</th>";
-
-        // ISBN
+        // ISBN (annoying?!)
         var isbn;
         try {
           var industryIdentifiers = v.volumeInfo.industryIdentifiers;
@@ -46,8 +39,17 @@ function searchBooks() {
           var isbnent = entriesII.next();
           isbn = isbnent.value[1].identifier;
         } catch (err) {
-          isbn = "Fehler"
+          isbn = "-"
         }
+
+        table = table + "<tr onclick='setInfoBook(\"" + v.volumeInfo.title + "\", \"" + v.volumeInfo.authors + "\", \"" + isbn +"\")'>";
+
+        // Name
+        table = table + "<th>" + v.volumeInfo.title + "</th>";
+        // Author
+        table = table + "<th>" + v.volumeInfo.authors + "</th>";
+        //ISBN
+
         table = table + "<th>" + isbn + "</th>";
 
         table = table + "</tr>";
@@ -55,6 +57,13 @@ function searchBooks() {
       document.getElementById("tablebody").innerHTML = table;
     }
   };
-  console.log(search)
+
+  // Send request
   xhttp.send("search=" + search);
+}
+
+function setInfoBook(name, author, isbn) {
+  document.getElementById("formTitle").value = name;
+  document.getElementById("formAuthor").value = author;
+  document.getElementById("formISBN").value = isbn;
 }

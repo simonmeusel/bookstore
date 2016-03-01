@@ -91,6 +91,7 @@
 
 						// Add all books to table
 						while ($row = mysql_fetch_assoc($query)) {
+							$id = $row["id"];
 							$bookname = $row["name"];
 							$bookauthor = $row["author"];
 							$bookisbn = $row["isbn"];
@@ -99,7 +100,7 @@
 							if ($row["taken"] != 0) {
 								$color = 'class="danger"';
 							}
-							echo "<tr $color>
+							echo "<tr $color onclick='alert($id)'>
 								<th>$bookname</th>
 								<th>$bookauthor</th>
 								<th>$bookisbn</th>

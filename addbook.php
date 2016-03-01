@@ -73,11 +73,12 @@
         <!-- Book information -->
         <div class="col-sm-12 col-lg-4">
           <form action="addbookdb.php" method="POST">
-            Name: <input type="text" name="title" class="form-control" id="formTitle" onchange="searchBooks()"> <br>
-            Author: <input type="text" name="author" class="form-control" id="formAuthor" onchange="searchBooks()"> <br>
-            ISBN: <input type="text" name="isbn" class="form-control" id="formISBN" onchange="searchBooks()"> <br>
+            Name: <input type="text" name="title" class="form-control" id="formTitle"> <br>
+            Author: <input type="text" name="author" class="form-control" id="formAuthor"> <br>
+            ISBN: <input type="text" name="isbn" class="form-control" id="formISBN"> <br>
             <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
           </form>
+					<button class="btn btn-warning" onclick="searchBooks()" action="nothing">Google books durschsuchen</button>
         </div>
         <!-- Google API Auto complete-->
         <div class="col-sm-12 col-lg-8">
