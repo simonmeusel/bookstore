@@ -58,10 +58,14 @@
                   			Login
                   		</a>';
                     } else {
-                      echo '<a href="" data-toggle="modal" data-target="#logoutModal">
+                      echo '<li><a href="" data-toggle="modal" data-target="#logoutModal">
                   			<span class="glyphicon glyphicon-edit"></span>
                   			Logout
-                  		</a>';
+                  		</a></li>';
+											echo '<li><a href="addbook.php">
+                  			<span class="glyphicon glyphicon-edit"></span>
+                  			Buch hinzufügen
+                  		</a></li>';
                     }
                   ?>
 								</ul>

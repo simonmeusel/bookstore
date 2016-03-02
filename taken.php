@@ -84,19 +84,20 @@
 						$connect = mysql_connect("localhost", "root", "root") or die("Could not connect to database!");
 					  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
-						// Book has to be availible
+						// Book has to be available
 					  $query = mysql_query("SELECT * FROM book WHERE taken!=0");
 
 						$numrow = mysql_num_rows($query);
 
 						// Add all books to table
 						while ($row = mysql_fetch_assoc($query)) {
+							$id = $row["id"];
 							$bookname = $row["name"];
 							$bookauthor = $row["author"];
 							$bookisbn = $row["isbn"];
 							echo "<tr>
 								<th>$bookname</th>
-								<th>$bookauthor</th>
+								<th>$date</th>
 								<th>$bookisbn</th>
 							</tr>";
 						}

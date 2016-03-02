@@ -41,15 +41,19 @@
 								<ul class="dropdown-menu">
 									<?php
                     if ($_SESSION["username"] == "") {
-                      echo '<a href="" data-toggle="modal" data-target="#loginModal">
+                      echo '<li><a href="" data-toggle="modal" data-target="#loginModal">
                   			<span class="glyphicon glyphicon-edit"></span>
                   			Login
-                  		</a>';
+                  		</a></li>';
                     } else {
-                      echo '<a href="" data-toggle="modal" data-target="#logoutModal">
+                      echo '<li><a href="" data-toggle="modal" data-target="#logoutModal">
                   			<span class="glyphicon glyphicon-edit"></span>
                   			Logout
-                  		</a>';
+                  		</a></li>';
+											echo '<li><a href="addbook.php">
+                  			<span class="glyphicon glyphicon-edit"></span>
+                  			Buch hinzufügen
+                  		</a></li>';
                     }
                   ?>
 								</ul>
@@ -76,10 +80,11 @@
             Name: <input type="text" name="name" class="form-control" id="formTitle"> <br>
             Author: <input type="text" name="author" class="form-control" id="formAuthor"> <br>
             ISBN: <input type="text" name="isbn" class="form-control" id="formISBN"> <br>
+            Message: <input type="text" name="message" class="form-control" id="formMessage"> <br>
             <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
           </form>
 					<button class="btn btn-warning" onclick="searchBooks()" action="nothing">Google books durschsuchen</button>
-        </div>
+				</div>
         <!-- Google API Auto complete-->
         <div class="col-sm-12 col-lg-8">
           <!-- Search results-->
@@ -103,6 +108,8 @@
           </table>
         </div>
       </div>
+
+			<hr>
 
       <!-- Login Popup-->
     	<div id='loginModal' class='modal fade' role='dialog'>
