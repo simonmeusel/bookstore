@@ -73,7 +73,7 @@
         <!-- Book information -->
         <div class="col-sm-12 col-lg-4">
           <form action="addbookdb.php" method="POST">
-            Name: <input type="text" name="title" class="form-control" id="formTitle"> <br>
+            Name: <input type="text" name="name" class="form-control" id="formTitle"> <br>
             Author: <input type="text" name="author" class="form-control" id="formAuthor"> <br>
             ISBN: <input type="text" name="isbn" class="form-control" id="formISBN"> <br>
             <button class="btn btn-primary" action="submit">Buch hinzufügen</button>

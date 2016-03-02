@@ -1,17 +1,27 @@
 <?php session_start();
 
-  $name = $_POST['name'];
-  $author = $_POST['author'];
-  $isbn =  $_POST['isbn'];
-  $date = $_POST['date'];
-  $message = $_POST['message'];
+  // Check account
+  if ($_SESSION["username"] != "") {
+    //Recieve Post request
+    $name = $_POST['name'];
+    $author = $_POST['author'];
+    $isbn =  $_POST['isbn'];
+    $date = $_POST['date'];
+    $message = $_POST['message'];
 
-  // Connect to MySQL
-  $connect = mysql_connect("localhost", "root", "root") or die("Could not connect to database!");
-  // Select batabase
-  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+    // Connect to MySQL database
+    $connect = mysql_connect("localhost", "root", "root") or die("Could not connect to database!");
+    // Select batabase
+    mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
-  // TODO Add book to database
+    // Add book to database
+    $sql = "INSERT INTO book (name, isbn, author, message, date, taken)
+      VALUES ('$name', '$isbn', '$author', 'message', NOW(), 0)";
+
+    // Run command
+    $response = mysql_query($sql, $connect);
+  }
+
 ?>
 <html>
 	<head>
@@ -84,13 +94,15 @@
       <!-- Login complete? -->
 
       <?php
-        if ($_SESSION["username"] == "") {
+        if ($_SESSION["username"] != "") {
           echo '<div class="alert alert-danger alert-dismissible" role="alert">
-          Einloggen fehlgeschlagen! <a data-toggle="modal" data-target="#loginModal">Erneut versuchen</a>
+          Buch hinzugefügt!
+          <p>Befehl: '.$sql.'<p>
+          <p>Antwork: '.$response.'</p>
           </div>';
         } else {
           echo '<div class="alert alert-danger alert-dismissible" role="alert">
-          Einloggen erfolgreich! Vergiss nicht dich <a data-toggle="modal" data-target="#logoutModal">Auszuloggen</a>
+          Du hast nicht die Erlaubnis ein Buch hinzuzufügen! <a data-toggle="modal" data-target="#loginModal">Logout</a>
           </div>';
         }
       ?>
