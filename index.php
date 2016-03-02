@@ -76,6 +76,7 @@
 						<th>Name</th>
 						<th>Author</th>
 						<th>ISBN</th>
+						<th>Löschen</th>
 					</tr>
 				</thead>
 				<!-- Table body -->
@@ -100,15 +101,32 @@
 							if ($row["taken"] != 0) {
 								$color = 'class="danger"';
 							}
-							echo "<tr $color onclick='alert($id)'>
-								<th>$bookname</th>
-								<th>$bookauthor</th>
-								<th>$bookisbn</th>
+							echo "<tr $color>
+								<th onclick='alert($id)'>$bookname</th>
+								<th onclick='alert($id)'>$bookauthor</th>
+								<th onclick='alert($id)'>$bookisbn</th>
+								<th><button onclick='deleteBook($id)' class='btn btn-danger'><span class='glyphicon glyphicon-pencil'></span></button></th>
 							</tr>";
 						}
 					?>
 				</tbody>
 			</table>
+
+			<!-- Delete Popup-->
+    	<div id='deleteModal' class='modal fade' role='dialog'>
+    		<div class='modal-dialog modal-sm'>
+  				<div class='modal-content'>
+  					<div class='modal-header'>
+    					<button type='button' class='close' data-dismiss='modal'>&times;</button>
+    					<h4 class='modal-title'>Wirklich löschen?</h4>
+    				</div>
+    				<div class='modal-body'>
+    					<button class='btn btn-default' data-dismiss='modal'>Abbrechen</button>
+	    				<button class='btn btn-danger' onclick='deleteBookDB()'>Löschen</button>
+    				</div>
+  				</div>
+  			</div>
+    	</div>
 
       <!-- Login Popup-->
     	<div id='loginModal' class='modal fade' role='dialog'>

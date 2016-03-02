@@ -1,3 +1,5 @@
+var lastBookDelete = 0;
+
 function searchBooks () {
   // Search criterias
   var search = "";
@@ -66,4 +68,23 @@ function setInfoBook(name, author, isbn) {
   document.getElementById("formTitle").value = name;
   document.getElementById("formAuthor").value = author;
   document.getElementById("formISBN").value = isbn;
+}
+
+function deleteBook (id) {
+  lastBookDelete = id;
+  $('#deleteModal').modal({ show: false})
+  $('#deleteModal').modal("show");
+}
+
+function deleteBookDB () {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.open("POST", "delbookdb.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.onreadystatechange = function() {
+    location.reload();
+  }
+
+  // Send request
+  xhttp.send("id=" + lastBookDelete);
 }
