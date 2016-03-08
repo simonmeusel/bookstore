@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); ini_set('display_errors','off');?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -26,8 +26,10 @@
               <!-- Tabs -->
               <li><a href="index.php">Verfügbare Bücher</a></li>
 							<?php
-								if ($_SESSION["username"] != "") {
-									echo '<li><a href="taken.php">Geliehene Bücher</a></li>';
+								if (array_key_exists("username", $_SESSION)) {
+									if ($_SESSION["username"] != "") {
+										echo '<li><a href="taken.php">Geliehene Bücher</a></li>';
+									}
 								}
 							?>
 						</ul>
@@ -86,7 +88,7 @@
 				<!-- Table body -->
 				<tbody>
 					<?php
-						$connect = mysql_connect("localhost", "root", "root") or die("Could not connect to database!");
+						$connect = mysql_connect("localhost", "root", "") or die("Could not connect to database!");
 					  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
 						// Book has to be availible

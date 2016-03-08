@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	session_start(); ini_set('display_errors','off');
 	$_SESSION["username"] = "";
 	// Logout
 	session_destroy();

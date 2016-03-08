@@ -1,9 +1,9 @@
-<?php session_start();
+<?php session_start(); ini_set('display_errors','off');
 
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $connect = mysql_connect("localhost", "root", "root") or die("Could not connect to database!");
+  $connect = mysql_connect("localhost", "root", "") or die("Could not connect to database!");
   mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
   $query = mysql_query("SELECT * FROM user WHERE name='$username' AND password='$password'");

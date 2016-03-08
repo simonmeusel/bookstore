@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start(); ini_set('display_errors','off'); ?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -81,24 +81,35 @@
 				<!-- Table body -->
 				<tbody>
 					<?php
-						$connect = mysql_connect("localhost", "root", "root") or die("Could not connect to database!");
-					  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+						$connect = mysql_connect("localhost", "root", "") or die("Could not connect to database!");
+						mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
 						// Book has to be available
-					  $query = mysql_query("SELECT * FROM book WHERE taken!=0");
+						$query = mysql_query("SELECT * FROM book WHERE taken!=0");
 
-						$numrow = mysql_num_rows($query);
+						//$numrow = mysql_num_rows($query);
 
 						// Add all books to table
 						while ($row = mysql_fetch_assoc($query)) {
-							$id = $row["id"];
+							$id = $row["taken"];
 							$bookname = $row["name"];
-							$bookauthor = $row["author"];
-							$bookisbn = $row["isbn"];
-							echo "<tr>
+
+							$query = mysql_query("SELECT * FROM took WHERE id=$id");
+
+							$row = mysql_fetch_assoc($query);
+							$deadline = $row["deadline"];
+							$name = $row["name"];
+
+							// Red color for overtime
+							$color = "";
+							if($deadline < date("Y-m-d H:i:s")) {
+								$color = 'class="danger"';
+							}
+
+							echo "<tr $color>
 								<th>$bookname</th>
-								<th>$date</th>
-								<th>$bookisbn</th>
+								<th>$name</th>
+								<th>$deadline</th>
 							</tr>";
 						}
 					?>
