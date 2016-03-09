@@ -83,7 +83,7 @@
             Message: <input type="text" name="message" class="form-control" id="formMessage"> <br>
             <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
           </form>
-					<button class="btn btn-warning" onclick="searchBooks()" action="nothing">Google books durschsuchen</button>
+					<button class="btn btn-warning" onclick="searchBooks()" action="nothing">Google books durchsuchen</button>
 				</div>
         <!-- Google API Auto complete-->
         <div class="col-sm-12 col-lg-8">
