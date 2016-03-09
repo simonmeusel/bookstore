@@ -1,4 +1,5 @@
 <?php session_start(); ini_set('display_errors','off'); ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -71,16 +72,21 @@
 					</noscript>
 				</div>
 			</div>
-      
-      <!-- Add book -->
+
+      <!-- Take book -->
       <div class="row">
         <!-- Book information -->
         <form action="tookbookkdb.php" method="POST">
-          Name: <input type="text" name="name" class="form-control" id="formTitle"> <br>
-          Author: <input type="text" name="author" class="form-control" id="formAuthor"> <br>
-          ISBN: <input type="text" name="isbn" class="form-control" id="formISBN"> <br>
-          Message: <input type="text" name="message" class="form-control" id="formMessage"> <br>
-          <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
+          Name: <input type="text" name="name" class="form-control" value="Test"> <br>
+          Notiz: <input type="text" name="notice" class="form-control"> <br>
+					Abgabedatum: <input type="date" name="deadline" class="form-control"> <br>
+					<input type="text" name="book" value=
+						<?php
+							$book = $_POST["book"];
+							echo '"'.$book.'"';
+						?>
+					>
+          <button class="btn btn-primary" action="submit">Buch ausleihen</button>
         </form>
       </div>
 
