@@ -113,12 +113,19 @@
 								<th onclick='alert($id)'>$bookisbn</th>
 								<th>
 									<button onclick='deleteBook($id)' class='btn btn-danger'><span class='glyphicon glyphicon-pencil'></span></button>
+									<button onclick='takebook($id)' class='btn btn-primary'><span class='glyphicon glyphicon-tags'></span></button>
 								</th>
 							</tr>";
 						}
 					?>
 				</tbody>
 			</table>
+
+			<!-- JavaScript forms-->
+
+			<form id="takebook" action="takebook.php" method="POST">
+				<input type="hidden" name="book" id="takebookId">
+			</form>
 
 			<!-- Delete Popup-->
     	<div id='deleteModal' class='modal fade' role='dialog'>

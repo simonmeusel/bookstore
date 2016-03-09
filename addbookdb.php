@@ -106,7 +106,7 @@
           </div>';
         } else {
           echo '<div class="alert alert-danger alert-dismissible" role="alert">
-          Du hast nicht die Erlaubnis ein Buch hinzuzufügen! <a data-toggle="modal" data-target="#loginModal">Logout</a>
+          Du hast nicht die Erlaubnis ein Buch hinzuzufügen! <a data-toggle="modal" data-target="#loginModal">Login</a>
           </div>';
         }
       ?>

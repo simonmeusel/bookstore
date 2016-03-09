@@ -88,3 +88,8 @@ function deleteBookDB () {
   // Send request
   xhttp.send("id=" + lastBookDelete);
 }
+
+function takebook(id) {
+  document.getElementById("takebookId").value = id;
+  document.getElementById("takebook").submit();
+}
