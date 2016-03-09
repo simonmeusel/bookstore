@@ -73,10 +73,10 @@
 								<ul class="dropdown-menu">
 									<?php
                     if ($_SESSION["username"] == "") {
-                      echo '<a href="" data-toggle="modal" data-target="#loginModal">
+                      echo '<li><a href="" data-toggle="modal" data-target="#loginModal">
                   			<span class="glyphicon glyphicon-edit"></span>
                   			Login
-                  		</a>';
+                  		</a></li>';
                     } else {
                       echo '<li><a href="" data-toggle="modal" data-target="#logoutModal">
                   			<span class="glyphicon glyphicon-edit"></span>
