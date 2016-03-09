@@ -82,7 +82,9 @@ function deleteBookDB () {
   xhttp.open("POST", "delbookdb.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
-    location.reload();
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      location.reload();
+    }
   }
 
   // Send request
@@ -92,4 +94,19 @@ function deleteBookDB () {
 function takebook(id) {
   document.getElementById("takebookId").value = id;
   document.getElementById("takebook").submit();
+}
+
+function giveback(id) {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.open("POST", "givebackdb.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      location.reload();
+    }
+  }
+
+  // Send request
+  xhttp.send("id=" + id);
 }

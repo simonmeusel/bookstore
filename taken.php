@@ -79,7 +79,9 @@
 					<tr>
 						<th>Name</th>
 						<th>Mitglied</th>
+						<th>Notiz</th>
 						<th>Abgabedatum</th>
+						<th></th>
 					</tr>
 				</thead>
 				<!-- Table body -->
@@ -102,6 +104,7 @@
 
 							$row = mysql_fetch_assoc($query);
 							$deadline = $row["deadline"];
+							$notice = $row["notice"];
 							$name = $row["name"];
 
 							// Red color for overtime
@@ -113,7 +116,11 @@
 							echo "<tr $color>
 								<th>$bookname</th>
 								<th>$name</th>
+								<th>$notice</th>
 								<th>$deadline</th>
+								<th>
+									<button onclick='giveback($id)' class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button>
+								<th>
 							</tr>";
 						}
 					?>

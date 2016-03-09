@@ -82,7 +82,7 @@
 						<th>Name</th>
 						<th>Author</th>
 						<th>ISBN</th>
-						<th>Funktionen</th>
+						<th></th>
 					</tr>
 				</thead>
 				<!-- Table body -->
