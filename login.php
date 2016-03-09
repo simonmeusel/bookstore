@@ -43,7 +43,7 @@
 								}
 							?>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
               <!-- Account Management -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">
@@ -51,18 +51,12 @@
                   <span class="glyphicon glyphicon-user"></span>
                 </a>
 								<ul class="dropdown-menu">
-                  <?php
+									<?php
                     if ($_SESSION["username"] == "") {
                       echo '<li><a href="" data-toggle="modal" data-target="#loginModal">
-<<<<<<< HEAD
                   			<span class="glyphicon glyphicon-edit"></span>
                   			Login
                   		</a></li>';
-=======
-                        <span class="glyphicon glyphicon-edit"></span>
-                        Login
-                      </a></li>';
->>>>>>> origin/master
                     } else {
                       echo '<li><a href="" data-toggle="modal" data-target="#logoutModal">
                   			<span class="glyphicon glyphicon-edit"></span>

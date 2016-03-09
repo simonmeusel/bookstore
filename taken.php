@@ -41,17 +41,10 @@
 								<ul class="dropdown-menu">
 									<?php
                     if ($_SESSION["username"] == "") {
-<<<<<<< HEAD
-                      echo '<li><a href="" data-toggle="modal" data-target="#loginModal">
-                  			<span class="glyphicon glyphicon-edit"></span>
-                  			Login
-                  		</a></li>';
-=======
 											echo '<li><a href="" data-toggle="modal" data-target="#loginModal">
 											  <span class="glyphicon glyphicon-edit"></span>
 											  Login
 											</a></li>';
->>>>>>> origin/master
                     } else {
                       echo '<li><a href="" data-toggle="modal" data-target="#logoutModal">
                   			<span class="glyphicon glyphicon-edit"></span>
