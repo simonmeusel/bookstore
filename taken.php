@@ -48,6 +48,7 @@
 			<th>$deadline</th>
 			<th>
 			<button onclick='giveback($id)' class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button>
+			<button onclick='alert(\"TODO: Add extend feature\")' class='btn btn-primary'><span class='glyphicon glyphicon-fast-forward'></span></button>
 			<th>
 			</tr>";
 		}

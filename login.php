@@ -1,4 +1,4 @@
-<?php include ("init.php");
+<?php include ("html/init.php");
 
 $username = $_POST['username'];
 $password = $_POST['password'];
