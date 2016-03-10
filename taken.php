@@ -28,9 +28,9 @@
 			$id = $row["taken"];
 			$bookname = $row["name"];
 
-			$query = mysql_query("SELECT * FROM took WHERE id=$id");
+			$query2 = mysql_query("SELECT * FROM took WHERE id=$id");
 
-			$row = mysql_fetch_assoc($query);
+			$row = mysql_fetch_assoc($query2);
 			$deadline = $row["deadline"];
 			$notice = $row["notice"];
 			$name = $row["name"];
