@@ -1,4 +1,4 @@
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <!-- Availible Books -->
 <table class="table table-hover">
@@ -49,8 +49,8 @@
 
 <!-- JavaScript forms-->
 
-<form id="takebook" action="takebook.php" method="POST">
+<form id="takebook" action="bookTake.php" method="POST">
 	<input type="hidden" name="book" id="takebookId">
 </form>
 
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>

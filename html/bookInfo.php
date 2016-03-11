@@ -1,5 +1,5 @@
 <?php
-include ("html/init.php");
+include ("include/init.php");
 
 $search = urlencode ($_POST['search']);
 $search = str_replace("------", "+", $search);

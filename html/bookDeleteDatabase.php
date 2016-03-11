@@ -1,4 +1,4 @@
-<?php include ("html/init.php");
+<?php include ("include/init.php");
 
 if ($_SESSION['username'] != "") {
   $id = $_POST['id'];

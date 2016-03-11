@@ -1,9 +1,9 @@
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <!-- Take book -->
 <div class="row">
 	<!-- Book information -->
-	<form action="takebookdb.php" method="POST">
+	<form action="bookTakeDatabase.php" method="POST">
 		Name: <input type="text" name="name" class="form-control" value="Test"> <br>
 		Notiz: <input type="text" name="notice" class="form-control"> <br>
 		Abgabedatum: <input type="date" name="deadline" class="form-control"> <br>
@@ -17,4 +17,4 @@
 	</form>
 </div>
 
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>

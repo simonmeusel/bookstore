@@ -1,4 +1,4 @@
-<?php include ("html/init.php");
+<?php include ("include/init.php");
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -12,7 +12,7 @@ if (mysql_num_rows($query) == 1) {
 }
 ?>
 
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <!-- Login complete? -->
 <?php
@@ -27,4 +27,4 @@ if ($_SESSION["username"] == "") {
 }
 ?>
 
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>

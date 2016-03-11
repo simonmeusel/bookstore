@@ -23,7 +23,7 @@
         <h4 class='modal-title'>Logge dich ein!</h4>
       </div>
       <div class='modal-body'>
-        <form  action='login.php' method='POST'>
+        <form  action='userLogin.php' method='POST'>
           <div class='form-group'>
             Benutzer:<input type='text' name='username' class='form-control'>
             <br>
@@ -45,7 +45,7 @@
         <h4 class='modal-title'>Logge dich aus!</h4>
       </div>
       <div class='modal-body'>
-        <form  action='logout.php' method='POST'>
+        <form  action='userLogout.php' method='POST'>
           <button type='submit' class='btn btn-default'>Ausloggen</button>
         </form>
       </div>

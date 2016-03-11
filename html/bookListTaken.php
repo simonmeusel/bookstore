@@ -1,4 +1,4 @@
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <!-- Availible Books -->
 <table class="table table-hover">
@@ -56,4 +56,4 @@
 	</tbody>
 </table>
 
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>

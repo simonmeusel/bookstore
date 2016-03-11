@@ -11,10 +11,10 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
         <!-- Tabs -->
-        <li><a href="index.php">Verfügbare Bücher</a></li>
+        <li><a href="bookListAvailable.php">Verfügbare Bücher</a></li>
         <?php
           if ($_SESSION["username"] != "") {
-            echo '<li><a href="taken.php">Geliehene Bücher</a></li>';
+            echo '<li><a href="bookListTaken.php">Geliehene Bücher</a></li>';
           }
         ?>
       </ul>
@@ -37,7 +37,7 @@
                   <span class="glyphicon glyphicon-edit"></span>
                   Logout
                 </a></li>';
-                echo '<li><a href="addbook.php">
+                echo '<li><a href="bookAdd.php">
                   <span class="glyphicon glyphicon-edit"></span>
                   Buch hinzufügen
                 </a></li>';

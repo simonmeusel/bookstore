@@ -1,4 +1,4 @@
-<?php include ("html/templateTop.php") ?>
+<?php include ("include/templateTop.php") ?>
 
 <?php
 // Declare variables
@@ -41,4 +41,4 @@ if ($datepickerFormDate == "") {
   <input type="hidden" name=<?php "'$datepickerFormDate'" ?> value="">
 </form>
 
-<?php include ("html/templateBottom.php") ?>
+<?php include ("include/templateBottom.php") ?>

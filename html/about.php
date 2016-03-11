@@ -1,4 +1,4 @@
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <h1>BookStore</h1>
 
@@ -8,4 +8,4 @@
   kannst du auf GitHub vorbeischauen:
 </p>
 <a href="https://github.com/simonmeusel/bookstore">BookStore auf GitHub</a>
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>

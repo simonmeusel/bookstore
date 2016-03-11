@@ -25,7 +25,7 @@ function searchBooks () {
 
   var xhttp = new XMLHttpRequest();
 
-  xhttp.open("POST", "book.php", true);
+  xhttp.open("POST", "bookInfo.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -79,7 +79,7 @@ function deleteBook (id) {
 function deleteBookDB () {
   var xhttp = new XMLHttpRequest();
 
-  xhttp.open("POST", "delbookdb.php", true);
+  xhttp.open("POST", "bookDeleteDatabase.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -99,7 +99,7 @@ function takebook(id) {
 function giveback(id) {
   var xhttp = new XMLHttpRequest();
 
-  xhttp.open("POST", "givebackdb.php", true);
+  xhttp.open("POST", "bookGivebackDtatabase.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {

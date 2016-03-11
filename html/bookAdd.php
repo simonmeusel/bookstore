@@ -1,10 +1,10 @@
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <!-- Add book -->
 <div class="row">
   <!-- Book information -->
   <div class="col-sm-12 col-lg-4">
-    <form action="addbookdb.php" method="POST">
+    <form action="bookAddDatabase.php" method="POST">
       Name: <input type="text" name="name" class="form-control" id="formTitle"> <br>
       Author: <input type="text" name="author" class="form-control" id="formAuthor"> <br>
       ISBN: <input type="text" name="isbn" class="form-control" id="formISBN"> <br>
@@ -37,4 +37,4 @@
   </div>
 </div>
 
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>

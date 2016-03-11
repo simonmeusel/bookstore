@@ -1,4 +1,4 @@
-<?php include ("html/init.php");
+<?php include ("include/init.php");
 
 // Check account
 if ($_SESSION["username"] != "") {
@@ -24,7 +24,7 @@ if ($_SESSION["username"] != "") {
 
 ?>
 
-<?php include ("html/templateTop.php"); ?>
+<?php include ("include/templateTop.php"); ?>
 
 <!-- Book added? -->
 <?php
@@ -41,4 +41,4 @@ if ($_SESSION["username"] != "") {
 }
 ?>
 
-<?php include ("html/templateBottom.php"); ?>
+<?php include ("include/templateBottom.php"); ?>
