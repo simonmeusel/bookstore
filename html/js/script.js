@@ -4,11 +4,13 @@ function searchBooks () {
   // Search criterias
   var search = "";
 
-  var title = document.getElementById("formTitle").value;
-  var author = document.getElementById("formAuthor").value;
-  var isbn = document.getElementById("formISBN").value;
-  if (title != "") {
-    search = search + "title:" + title;
+  var name = document.getElementById("bookAddFormName").value;
+  var author = document.getElementById("bookAddFormAuthor").value;
+  var isbn = document.getElementById("bookAddFormISBN").value;
+  var publisher = document.getElementById("bookAddFormPublisher").value;
+
+  if (name != "") {
+    search = search + "title:" + name;
   }
   if (author != "") {
     if (search != "") {
@@ -21,6 +23,12 @@ function searchBooks () {
       search = search + "------";
     }
     search = search + "isbn:" + isbn;
+  }
+  if (publisher != "") {
+    if (search != "") {
+      search = search + "------";
+    }
+    search = search + "inpublisher:" + publisher;
   }
 
   var xhttp = new XMLHttpRequest();

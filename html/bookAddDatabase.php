@@ -3,11 +3,17 @@
 // Check account
 if ($_SESSION["username"] != "") {
   //Recieve Post request
+  $bid = $_POST['bid'];
   $name = $_POST['name'];
-  $author = $_POST['author'];
   $isbn =  $_POST['isbn'];
-  $date = $_POST['date'];
+  $author = $_POST['author'];
   $message = $_POST['message'];
+  // SQL function NOW() $date = $_POST['date'];
+  $publisher = $_POST['publisher'];
+  $giver = $_POST['giver'];
+  $field = $_POST['field'];
+  $publishingdate = $_POST['publishingdate'];
+  $price = $_POST['price'];
 
   // Connect to MySQL database
   $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
@@ -15,8 +21,8 @@ if ($_SESSION["username"] != "") {
   mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
   // Add book to database
-  $sql = "INSERT INTO book (name, isbn, author, message, date, taken)
-  VALUES ('$name', '$isbn', '$author', '$message', NOW(), 0)";
+  $sql = "INSERT INTO book (bid, name, isbn, author, message, date, publisher, giver, field, publishingdate, price, taken)
+  VALUES ('$bid', '$name', '$isbn', '$author', '$message', NOW(), '$publisher', '$giver', '$field', '$publishingdate', '$price', 0)";
 
   // Run command
   $response = mysql_query($sql, $connect);
