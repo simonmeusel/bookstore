@@ -10,7 +10,7 @@ if ($_SESSION["username"] != "") {
   $message = $_POST['message'];
 
   // Connect to MySQL database
-  $connect = mysql_connect("localhost", "root", "") or die("Could not connect to database!");
+  $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
   // Select batabase
   mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
