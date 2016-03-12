@@ -1,18 +1,6 @@
-<?php include ("include/templateTop.php") ?>
-
-<?php
-// Declare variables
-if ($datepickerMethod == "") {
-  $datepickerMethod = "POST";
-}
-if ($datepickerFormDate == "") {
-  $datepickerFormDate = "datepickerDate";
-}
-?>
-
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#datepickerTabRelative">Relativ</a></li>
-  <li><a data-toggle="tab" href="#datepickerTabAbsolute">Absolut</a></li>
+  <li><a data-toggle="tab" href="#datepickerTabAbsolute">Absolut (HTML 5)</a></li>
 </ul>
 
 <div class="tab-content">
@@ -36,9 +24,3 @@ if ($datepickerFormDate == "") {
       <hr>
     </div>
 </div>
-
-<form action=<?php "'$datepickerAction'" ?> method=<?php "'$datepickerMethod'" ?> id="datepickerForm">
-  <input type="hidden" name=<?php "'$datepickerFormDate'" ?> value="">
-</form>
-
-<?php include ("include/templateBottom.php") ?>
