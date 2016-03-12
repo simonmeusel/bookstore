@@ -5,7 +5,7 @@
   <!-- Book information -->
   <div class="col-sm-12 col-lg-4">
     <form action="bookAddDatabase.php" method="POST">
-      Name:               <input type="text" name="name" class="form-control" id="bookAddFormName"> <br>
+      Name:               <input type="text" name="name" class="form-control" id="bookAddFormName" autofocus> <br>
       ISBN:               <input type="text" name="isbn" class="form-control" id="bookAddFormISBN"> <br>
       Author:             <input type="text" name="author" class="form-control" id="bookAddFormAuthor"> <br>
       Verlag:             <input type="text" name="publisher" class="form-control" id="bookAddFormPublisher"> <br>
@@ -15,7 +15,7 @@
       Fachgebiet:         <input type="text" name="field" class="form-control" id="bookAddFormField"> <br>
       Veröffentlichung:   <input type="text" name="publishingdate" class="form-control" id="bookAddFormPublishingdate"> <br>
       Preis:              <input type="text" name="price" class="form-control" id="bookAddFormPrice"> <br>
-      Message:            <input type="text" name="message" class="form-control" id="bookAddFormMessage"> <br>
+      Notiz:            <input type="text" name="message" class="form-control" id="bookAddFormMessage"> <br>
       <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
     </form>
   </div>
@@ -39,11 +39,10 @@
       <!-- Table body -->
       <tbody id="tablebody">
       </tbody>
-      <div>
-
-      </div>
     </table>
   </div>
 </div>
+
+<script src="js/book/add.js"></script>
 
 <?php include ("include/templateBottom.php"); ?>

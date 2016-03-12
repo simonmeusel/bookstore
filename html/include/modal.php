@@ -7,7 +7,7 @@
         <h4 class='modal-title'>Wirklich löschen?</h4>
       </div>
       <div class='modal-body'>
-        <button class='btn btn-default' data-dismiss='modal'>Abbrechen</button>
+        <button class='btn btn-default' data-dismiss='modal' autofocus>Abbrechen</button>
         <button class='btn btn-danger' onclick='deleteBookDB()'>Löschen</button>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <div class='modal-body'>
         <form  action='userLogin.php' method='POST'>
           <div class='form-group'>
-            Benutzer:<input type='text' name='username' class='form-control'>
+            Benutzer:<input type='text' name='username' class='form-control' autofocus>
             <br>
             Passwort:<input type='password' name='password' class='form-control'>
           </div>
@@ -46,7 +46,7 @@
       </div>
       <div class='modal-body'>
         <form  action='userLogout.php' method='POST'>
-          <button type='submit' class='btn btn-default'>Ausloggen</button>
+          <button type='submit' class='btn btn-default' autofocus>Ausloggen</button>
         </form>
       </div>
     </div>
