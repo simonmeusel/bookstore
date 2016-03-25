@@ -18,7 +18,7 @@
 		mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
 		// Book has to be availible
-		$query = mysql_query("SELECT * FROM book"); // WHERE hidden=0
+		$query = mysql_query("SELECT * FROM book WHERE hidden=false");
 
 		$numrow = mysql_num_rows($query);
 

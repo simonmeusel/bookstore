@@ -13,6 +13,21 @@ if ($_SESSION["username"] != "") {
   // Select batabase
   mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
+  // Get old extensions
+  $query = "SELECT extensions FROM took WHERE id = $took";
+
+  $result = mysql_query($query);
+
+  while ($row = mysql_fetch_assoc($result)) {
+    $extensions = $row["extensions"];
+  }
+  $extensions = $extensions . "// " . $deadline . " ";
+
+  // Update extensions
+  $sql = "UPDATE took SET extensions='$extensions' WHERE id=$took";
+  mysql_query($sql, $connect);
+
+  // Update deadline
   $sql = "UPDATE took SET deadline='$deadline' WHERE id=$took";
   $response = mysql_query($sql, $connect);
 

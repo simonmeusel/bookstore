@@ -34,7 +34,7 @@ function extendbook(id) {
 function giveback(id) {
   var xhttp = new XMLHttpRequest();
 
-  xhttp.open("POST", "bookGivebackDtatabase.php", true);
+  xhttp.open("POST", "bookGivebackDatabase.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {

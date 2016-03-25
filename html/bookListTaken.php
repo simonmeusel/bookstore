@@ -7,6 +7,7 @@
 		<tr>
 			<th>Name</th>
 			<th>Mitglied</th>
+			<th>Verlängerungen</th>
 			<th>Notiz</th>
 			<th>Abgabedatum</th>
 			<th></th>
@@ -18,8 +19,8 @@
 		$connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
 		mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
-		// Book has to be available
-		$query = mysql_query("SELECT * FROM book WHERE taken!=0");
+		// Book has to be taken
+		$query = mysql_query("SELECT * FROM book WHERE taken!=0 AND hidden=false");
 
 		//$numrow = mysql_num_rows($query);
 
@@ -32,6 +33,7 @@
 
 			$row = mysql_fetch_assoc($query2);
 			$deadline = $row["deadline"];
+			$extensions = $row["extensions"];
 			$notice = $row["notice"];
 			$name = $row["name"];
 
@@ -44,6 +46,7 @@
 			echo "<tr $color>
 			<th>$bookname</th>
 			<th>$name</th>
+			<th>$extensions</th>
 			<th>$notice</th>
 			<th>$deadline</th>
 			<th>

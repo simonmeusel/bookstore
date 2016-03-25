@@ -16,8 +16,8 @@ if ($_SESSION["username"] != "") {
   mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
   // Add book to database
-  $sql = "INSERT INTO took (name, date, deadline, notice)
-  VALUES ('$name', NOW(), '$deadline', '$notice')";
+  $sql = "INSERT INTO took (name, date, deadline, notice, book)
+  VALUES ('$name', NOW(), '$deadline', '$notice', $book)";
 
   // Run command
   $response = mysql_query($sql, $connect);
