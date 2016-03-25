@@ -4,7 +4,7 @@
 if ($_SESSION["username"] != "") {
   //Recieve Post request
   $name = $_POST['name'];
-  $notice = $_POST['notice'];
+  $class = $_POST['class'];
   $deadline = $_POST['deadline'];
   $book = $_POST['book'];
 
@@ -16,8 +16,8 @@ if ($_SESSION["username"] != "") {
   mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 
   // Add book to database
-  $sql = "INSERT INTO took (name, date, deadline, notice, book)
-  VALUES ('$name', NOW(), '$deadline', '$notice', $book)";
+  $sql = "INSERT INTO took (name, date, deadline, class, book)
+  VALUES ('$name', NOW(), '$deadline', '$class', $book)";
 
   // Run command
   $response = mysql_query($sql, $connect);

@@ -5,7 +5,7 @@
 	<!-- Book information -->
 	<form action="bookTakeDatabase.php" method="POST">
 		Name: <input type="text" name="name" class="form-control"> <br>
-		Notiz: <input type="text" name="notice" class="form-control"> <br>
+		Klasse: <input type="text" name="class" class="form-control"> <br>
 		Abgabedatum: <input type="date" name="deadline" class="form-control"> <br>
 		<input type="hidden" name="book" value=
 		<?php

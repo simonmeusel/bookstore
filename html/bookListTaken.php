@@ -8,7 +8,7 @@
 			<th>Name</th>
 			<th>Mitglied</th>
 			<th>Verlängerungen</th>
-			<th>Notiz</th>
+			<th>Überziehungsgebühren</th>
 			<th>Abgabedatum</th>
 			<th></th>
 		</tr>
