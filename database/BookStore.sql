@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.5
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 11, 2016 at 03:42 PM
--- Server version: 5.6.28-0ubuntu0.15.10.1
--- PHP Version: 5.6.11-1ubuntu3.1
+-- Host: 127.0.0.1
+-- Erstellungszeit: 25. Mrz 2016 um 21:35
+-- Server-Version: 5.7.9
+-- PHP-Version: 5.6.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,17 +17,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `BookStore`
+-- Datenbank: `bookstore`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `book`
+-- Tabellenstruktur für Tabelle `book`
 --
 
-CREATE TABLE `book` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `book`;
+CREATE TABLE IF NOT EXISTS `book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `bid` varchar(10) NOT NULL,
   `name` varchar(50) NOT NULL,
   `isbn` varchar(20) NOT NULL,
@@ -39,78 +40,51 @@ CREATE TABLE `book` (
   `field` varchar(10) NOT NULL,
   `publishingDate` date NOT NULL,
   `price` varchar(10) NOT NULL,
-  `taken` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='at';
+  `hidden` tinyint(1) NOT NULL,
+  `taken` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='at';
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `took`
+-- Tabellenstruktur für Tabelle `took`
 --
 
-CREATE TABLE `took` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `took`;
+CREATE TABLE IF NOT EXISTS `took` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `date` date NOT NULL,
   `deadline` date NOT NULL,
+  `giveback` date NOT NULL,
   `class` varchar(5) NOT NULL,
-  `notice` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `extensions` varchar(250) NOT NULL,
+  `notice` varchar(100) NOT NULL,
+  `book` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Tabellenstruktur für Tabelle `user`
 --
 
-CREATE TABLE `user` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
   `name` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Daten für Tabelle `user`
 --
 
 INSERT INTO `user` (`name`, `password`) VALUES
 ('root', 'root');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `book`
---
-ALTER TABLE `book`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `took`
---
-ALTER TABLE `took`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`name`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `book`
---
-ALTER TABLE `book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `took`
---
-ALTER TABLE `took`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
