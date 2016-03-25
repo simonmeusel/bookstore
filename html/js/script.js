@@ -26,6 +26,11 @@ function takebook(id) {
   document.getElementById("takebook").submit();
 }
 
+function extendbook(id) {
+  document.getElementById("extendbookId").value = id;
+  document.getElementById("extendbook").submit();
+}
+
 function giveback(id) {
   var xhttp = new XMLHttpRequest();
 

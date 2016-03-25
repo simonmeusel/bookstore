@@ -1,4 +1,4 @@
 <?php
 $mysqlUsername = "root";
-$mysqlPassword = "root";
+$mysqlPassword = "";
 ?>

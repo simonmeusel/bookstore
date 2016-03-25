@@ -48,12 +48,18 @@
 			<th>$deadline</th>
 			<th>
 			<button onclick='giveback($id)' class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button>
-			<button onclick='alert(\"TODO: Add extend feature\")' class='btn btn-primary'><span class='glyphicon glyphicon-fast-forward'></span></button>
+			<button onclick='extendbook($id)' class='btn btn-primary'><span class='glyphicon glyphicon-fast-forward'></span></button>
 			<th>
 			</tr>";
 		}
 		?>
 	</tbody>
 </table>
+
+<!-- JavaScript forms-->
+
+<form id="extendbook" action="bookExtend.php" method="POST">
+	<input type="hidden" name="took" id="extendbookId">
+</form>
 
 <?php include ("include/templateBottom.php"); ?>
