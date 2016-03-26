@@ -30,16 +30,80 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   while ($row = mysql_fetch_assoc($query)) {
     // Basic Info
+    // Name
+    $name = $row["name"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Name</div>
+    <div class=\"panel-body\">
+    $name
+    </div>
+    </div>";
+    // ISBN
+    $isbn = $row["isbn"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Isbn</div>
+    <div class=\"panel-body\">
+    $isbn
+    </div>
+    </div>";
+    // Author
+    $author = $row["author"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Author</div>
+    <div class=\"panel-body\">
+    $author
+    </div>
+    </div>";
+    // Publisher
+    $publisher = $row["publisher"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Verlag</div>
+    <div class=\"panel-body\">
+    $publisher
+    </div>
+    </div>";
+    // Publishing date
+    $publishingDate = $row["publishingDate"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Herausgabedatum</div>
+    <div class=\"panel-body\">
+    $publishingDate
+    </div>
+    </div>";
+    // Field
+    $field = $row["field"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Gebiet</div>
+    <div class=\"panel-body\">
+    $field
+    </div>
+    </div>";
+    // Price
+    $price = $row["price"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Preis</div>
+    <div class=\"panel-body\">
+    $price
+    </div>
+    </div>";
 
     if ($_SESSION["username"] != "") {
-      // TODO More info
+      // More info
+      // Giver
+      $giver = $row["giver"];
+      echo "<div class=\"panel panel-default\">
+      <div class=\"panel-heading\">Spender</div>
+      <div class=\"panel-body\">
+      $giver
+      </div>
+      </div>";
       // Debug info
-      echo '<div class="alert alert-danger alert-dismissible" role="alert">';
-      echo 'Du siehst hier Debug-Informationen. Sie können dem System-Administrator helfen, Probleme zu lösen.<hr>';
+      echo '<div onclick="toggleHide()" class="alert alert-danger alert-dismissible" role="alert">';
+      echo 'Du siehst hier Debug-Informationen. Sie können dem System-Administrator helfen, Probleme zu lösen. <div id="hide"> <hr>';
       foreach($row as $key=>$value) {
         echo "<p>$key : $value</p>";
       }
-      echo '</div>';
+      echo '</div></div>';
     } else {
       echo '<div class="alert alert-danger alert-dismissible" role="alert">
       Einige Informationen sind nicht sichtbar. Melden sie sich hier an, um sie freizuschalten <a data-toggle="modal" data-target="#loginModal">Login</a>.
@@ -48,5 +112,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   }
   ?>
 </div>
+
+<script src="js/book/info.js"></script>
 
 <?php include ("include/templateBottom.php"); ?>

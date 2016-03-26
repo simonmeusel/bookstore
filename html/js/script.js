@@ -18,6 +18,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 var lastBookDelete = 0;
 
+function goTop() {
+  window.scrollTo(0, 0);
+}
+
 function deleteBook (id) {
   lastBookDelete = id;
   $('#deleteModal').modal({ show: false})

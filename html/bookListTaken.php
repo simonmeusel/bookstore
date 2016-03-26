@@ -68,9 +68,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			<th>$notice</th>
 			<th>$deadline</th>
 			<th>
-			<button onclick='giveback($id)' class='btn btn-success'><span class='glyphicon glyphicon-ok'></span></button>
-			<button onclick='extendbook($id)' class='btn btn-primary'><span class='glyphicon glyphicon-fast-forward'></span></button>
-			<th>
+			<button onclick='giveback($id)' class='btn btn-success' title='Buch abgeben'><span class='glyphicon glyphicon-ok'></span></button>
+			<button onclick='extendbook($id)' class='btn btn-primary' title='Verlängern'><span class='glyphicon glyphicon-fast-forward'></span></button>
+			</th>
 			</tr>";
 		}
 		?>

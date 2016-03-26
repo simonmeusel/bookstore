@@ -18,16 +18,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- Footer with additional info -->
 <footer>
-  <div class="container">
+  <div class="container unselectable" onclick="goTop()">
     <div class="row">
+      <div class="col-sm-4">
+        BookStore
+      </div>
       <div class="col-sm-4">
         Created by Simon Meusel
       </div>
       <div class="col-sm-4">
-        BookStrore
-      </div>
-      <div class="col-sm-4">
-        Go back up
+        Click to go to top
       </div>
     </div>
   </div>
