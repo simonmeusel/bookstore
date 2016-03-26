@@ -21,13 +21,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <div class="container unselectable" onclick="goTop()">
     <div class="row">
       <div class="col-sm-4">
-        BookStore
+        <a href="about.php">BookStore</a>
       </div>
       <div class="col-sm-4">
-        Created by Simon Meusel
+        <a href="https://github.com/simonmeusel">Created by Simon Meusel</a>
       </div>
       <div class="col-sm-4">
-        Click to go to top
+        <a>Click to go to top</a>
       </div>
     </div>
   </div>
