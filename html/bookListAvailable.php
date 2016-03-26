@@ -28,18 +28,19 @@
 			$bookname = $row["name"];
 			$bookauthor = $row["author"];
 			$bookisbn = $row["isbn"];
+			$tooltip = $row["bid"] . " " . $row["name"] . " " . $row["author"] . " " . $row["isbn"] . " " . $row["price"] . " " . $row["field"] . " " . $row["message"] . " " . $row["date"] . " " . $row["publisher"] . " " . $row["giver"];
 			// Mark taken books red
 			$color = "";
 			if ($row["taken"] != 0) {
 				$color = 'class="danger"';
 			}
-			echo "<tr $color>
+			echo "<tr $color title='$tooltip'>
 			<th onclick='alert($id)'>$bookname</th>
 			<th onclick='alert($id)'>$bookauthor</th>
 			<th onclick='alert($id)'>$bookisbn</th>
 			<th>
-			<button onclick='deleteBook($id)' class='btn btn-danger'><span class='glyphicon glyphicon-pencil'></span></button>
-			<button onclick='takebook($id)' class='btn btn-primary'><span class='glyphicon glyphicon-tags'></span></button>
+			<button onclick='deleteBook($id)' class='btn btn-danger' title='Buch löschen'><span class='glyphicon glyphicon-pencil'></span></button>
+			<button onclick='takebook($id)' class='btn btn-primary' title='Buch ausleihen'><span class='glyphicon glyphicon-tags'></span></button>
 			</th>
 			</tr>";
 		}

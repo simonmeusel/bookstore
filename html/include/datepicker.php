@@ -1,3 +1,5 @@
+<!-- Not in use yet -->
+
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#datepickerTabRelative">Relativ</a></li>
   <li><a data-toggle="tab" href="#datepickerTabAbsolute">Absolut (HTML 5)</a></li>

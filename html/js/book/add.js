@@ -33,7 +33,7 @@ function searchBooks () {
 
   var xhttp = new XMLHttpRequest();
 
-  xhttp.open("POST", "bookInfo.php", true);
+  xhttp.open("POST", "bookGoogleAPI.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
