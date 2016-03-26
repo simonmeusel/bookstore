@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <span class="icon-bar"> </span>
         <span class="icon-bar"> </span>
       </button>
-      <a class="navbar-brand" href="about.php">BookStore</a>
+      <a class="navbar-brand" href="about.php"> BookStore</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">

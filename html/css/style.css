@@ -16,6 +16,12 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+body {
+    background-image: url('../logo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -26,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 }
 
 footer {
-	background: #333;
+	background: rgba(0,0,0,0.7);
 	color: #eee;
 	font-size: 11px;
 	padding: 20px;
