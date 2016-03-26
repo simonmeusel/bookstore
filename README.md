@@ -1,5 +1,3 @@
-
-
 # bookstore
   Library management program
 
@@ -53,3 +51,7 @@
   - Bootstrap: http://getbootstrap.com/
   - JQuery: https://jquery.com/
   - Google Books API https://developers.google.com/books/
+
+## Screenshot
+  
+  ![alt text](https://github.com/simonmeusel/bookstore/blob/master/image/bookstoreBanner.PNG)
