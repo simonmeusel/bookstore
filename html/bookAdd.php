@@ -23,17 +23,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Book information -->
   <div class="col-sm-12 col-lg-4">
     <form action="bookAddDatabase.php" method="POST">
-      Name:               <input type="text" name="name" class="form-control" id="bookAddFormName" autofocus> <br>
-      ISBN:               <input type="text" name="isbn" class="form-control" id="bookAddFormISBN"> <br>
-      Author:             <input type="text" name="author" class="form-control" id="bookAddFormAuthor"> <br>
-      Verlag:             <input type="text" name="publisher" class="form-control" id="bookAddFormPublisher"> <br>
+      Name:
+      <input type="text" name="name" class="form-control" id="bookAddFormName" autofocus> <br>
+      ISBN:
+      <input type="text" name="isbn" class="form-control" id="bookAddFormISBN"> <br>
+      Author:
+      <input type="text" name="author" class="form-control" id="bookAddFormAuthor"> <br>
+      Verlag:
+      <input type="text" name="publisher" class="form-control" id="bookAddFormPublisher"> <br>
+      // Search for matching books (Google APIs)
       <button class="btn btn-warning" onclick="searchBooks()" type="button">Google books durchsuchen</button> <br> <hr>
-      Buch ID             <input type="text" name="bid" class="form-control" id="bookAddFormBid"> <br>
-      Spender:            <input type="text" name="giver" class="form-control" id="bookAddFormGiver"> <br>
-      Fachgebiet:         <input type="text" name="field" class="form-control" id="bookAddFormField"> <br>
-      Veröffentlichung:   <input type="text" name="publishingdate" class="form-control" id="bookAddFormPublishingdate"> <br>
-      Preis:              <input type="text" name="price" class="form-control" id="bookAddFormPrice"> <br>
-      Notiz:            <input type="text" name="message" class="form-control" id="bookAddFormMessage"> <br>
+      Buch ID
+      <input type="text" name="bid" class="form-control" id="bookAddFormBid"> <br>
+      Spender:
+      <input type="text" name="giver" class="form-control" id="bookAddFormGiver"> <br>
+      Fachgebiet:
+      <input type="text" name="field" class="form-control" id="bookAddFormField"> <br>
+      Veröffentlichung:
+  		<div class="form-group">
+  			<div class='input-group date' id='datetimepicker3'>
+  				<input type='text' class="form-control" name="publishingdate" id="bookAddFormPublishingdate">
+  				<span class="input-group-addon">
+  					<span class="glyphicon glyphicon-calendar"></span>
+  				</span>
+  			</div>
+  		</div> <br>
+      Preis:
+      <input type="text" name="price" class="form-control" id="bookAddFormPrice"> <br>
+      Notiz:
+      <input type="text" name="message" class="form-control" id="bookAddFormMessage"> <br>
       <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
     </form>
   </div>
