@@ -2,10 +2,10 @@
   Library management software
 
 ## Features
-  - Unlimited book
+  - Responsive website design with Bootstrap
   - Search for book (by author, title and publisher)
   - Lend as many books as you want
-  - Works with Lamp stack (Apche, Php, MySQL)
+  - Works with Lamp stack (Apache, Php, MySQL)
   - Database example ready to import via PhpMyAdmin
   - Create diffrent users
   - Language support: german !!!
