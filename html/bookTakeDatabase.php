@@ -26,8 +26,6 @@ if ($_SESSION["username"] != "") {
   $deadline = $_POST['deadline'];
   $book = $_POST['book'];
 
-  $deadline = date("Y-m-d", strtotime($deadline));
-
   // Connect to MySQL database
   $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
   // Select batabase
@@ -40,8 +38,6 @@ if ($_SESSION["username"] != "") {
   // Run command
   $response = mysql_query($sql, $connect);
   $took = mysql_insert_id();
-
-  echo "Took id = $took ; $book";
 
   $sql = "UPDATE book SET taken=$took WHERE id=$book";
   $response = mysql_query($sql, $connect);

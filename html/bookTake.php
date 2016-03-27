@@ -22,9 +22,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <div class="row">
 	<!-- Book information -->
 	<form action="bookTakeDatabase.php" method="POST">
-		Name: <input type="text" name="name" class="form-control"> <br>
-		Klasse: <input type="text" name="class" class="form-control"> <br>
-		Abgabedatum: <input type="date" name="deadline" class="form-control"> <br>
+		Name:
+		<input type="text" name="name" class="form-control"> <br>
+		Klasse:
+		<input type="text" name="class" class="form-control"> <br>
+		Abgabedatum:
+		<div class="form-group">
+			<div class='input-group date' id='datetimepicker3'>
+				<input type='text' class="form-control" name="deadline">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+			</div>
+		</div> <br>
+
 		<input type="hidden" name="book" value=
 		<?php
 		$book = $_POST["book"];

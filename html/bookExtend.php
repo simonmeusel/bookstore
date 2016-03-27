@@ -22,7 +22,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <div class="row">
 	<!-- Book information -->
 	<form action="bookExtendDatabase.php" method="POST">
-		Abgabedatum: <input type="date" name="deadline" class="form-control"> <br>
+		Abgabedatum:
+		<div class="form-group">
+			<div class='input-group date' id='datetimepicker3'>
+				<input type='text' class="form-control" name="deadline">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-time"></span>
+				</span>
+			</div>
+		</div> <br>
+
 		<input type="hidden" name="took" value=
 		<?php
 		$book = $_POST["took"];

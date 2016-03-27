@@ -24,8 +24,6 @@ if ($_SESSION["username"] != "") {
   $deadline = $_POST['deadline'];
   $took = $_POST['took'];
 
-  $deadline = date("Y-m-d", strtotime($deadline));
-
   // Connect to MySQL database
   $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
   // Select batabase

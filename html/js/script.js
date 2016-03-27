@@ -18,6 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 var lastBookDelete = 0;
 
+// Datepicker
+$(function () {
+  $('#datetimepicker3').datetimepicker({
+    format: 'YYYY-MM-DD'
+  });
+});
+
 function goTop() {
   window.scrollTo(0, 0);
 }

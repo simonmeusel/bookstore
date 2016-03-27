@@ -17,5 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <script src="js/jquery.min.js"></script>
+<script src="js/moment-with-locales.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/script.js"></script>
