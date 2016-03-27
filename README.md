@@ -1,5 +1,5 @@
 # bookstore
-  Library management program
+  Library management software
 
 ## Features
   - Unlimited book
