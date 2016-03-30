@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     // language => image availible
     // Save the image to lang/[ISO 639-3 language code].png
     // Example lang/deu.png
-    deu => false,
+    "deu" => false,
   ];
   // Language for new users
   $lang_default = "deu";
@@ -33,6 +33,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   // Username of MySQL user with read and write permissions at database bookstore
   $mysqlUsername = "root";
   // Password of MySQL user with read and write permissions at database bookstore
-  $mysqlPassword = "root";
+  $mysqlPassword = "";
+}
+
+{ // Google Book API
+  $bookApiLanguage = "de";
 }
 ?>

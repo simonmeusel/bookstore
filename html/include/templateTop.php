@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 BookStrore is a library management software.
 Copyright (C) 2016  Simon Meusel

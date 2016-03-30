@@ -62,11 +62,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 			}
 
 			echo "<tr $color>
-			<th>$bookname</th>
-			<th>$name</th>
-			<th>$extensions</th>
-			<th>$notice</th>
-			<th>$deadline</th>
+			<th onclick='infoTook($id)'>$bookname</th>
+			<th onclick='infoTook($id)'>$name</th>
+			<th onclick='infoTook($id)'>$extensions</th>
+			<th onclick='infoTook($id)'>$notice</th>
+			<th onclick='infoTook($id)'>$deadline</th>
 			<th>
 			<button onclick='giveback($id)' class='btn btn-success' title='Buch abgeben'><span class='glyphicon glyphicon-ok'></span></button>
 			<button onclick='extendbook($id)' class='btn btn-primary' title='Verlängern'><span class='glyphicon glyphicon-fast-forward'></span></button>
@@ -81,6 +81,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 <form id="extendbook" action="bookExtend.php" method="POST">
 	<input type="hidden" name="took" id="extendbookId">
+</form>
+
+
+<form id="infoTook" action="bookTookInfo.php" method="POST">
+	<input type="hidden" name="id" id="infoTookId">
 </form>
 
 <?php include ("include/templateBottom.php"); ?>

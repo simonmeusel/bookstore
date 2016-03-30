@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 body {
     background: rgb(203, 203, 203);
-    background-image: url('../logo.png');
+    background-image: url('../logo.svg');
     background-repeat: no-repeat;
     background-size: 100%;
 }

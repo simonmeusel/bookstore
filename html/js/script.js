@@ -62,6 +62,11 @@ function infoBook(id) {
   document.getElementById("infoBook").submit();
 }
 
+function infoTook(id) {
+  document.getElementById("infoTookId").value = id;
+  document.getElementById("infoTook").submit();
+}
+
 function extendbook(id) {
   document.getElementById("extendbookId").value = id;
   document.getElementById("extendbook").submit();
