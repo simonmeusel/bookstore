@@ -20,4 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 include ("include/settings.php");
 session_start();
 ini_set('display_errors','off');
+
+// Set language of user
+// TODO Save/load language of user
+include ("lang/$lang_default.php");
 ?>

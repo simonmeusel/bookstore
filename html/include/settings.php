@@ -17,13 +17,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
 <?php
-// Language
-// Language for new users
-$lang_default = "en";
+{ // Language
+  // Available languages
+  $lang_available = [
+    // language => image availible
+    // Save the image to lang/[ISO 639-3 language code].png
+    // Example lang/deu.png
+    deu => false,
+  ];
+  // Language for new users
+  $lang_default = "deu";
+}
 
-// MySQL
-// Username of MySQL user with read and write permissions at database bookstore
-$mysqlUsername = "root";
-// Password of MySQL user with read and write permissions at database bookstore
-$mysqlPassword = "";
+{ // MySQL
+  // Username of MySQL user with read and write permissions at database bookstore
+  $mysqlUsername = "root";
+  // Password of MySQL user with read and write permissions at database bookstore
+  $mysqlPassword = "root";
+}
 ?>

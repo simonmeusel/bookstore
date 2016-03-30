@@ -24,15 +24,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <span class="icon-bar"> </span>
         <span class="icon-bar"> </span>
       </button>
-      <a class="navbar-brand" href="about.php"> BookStore</a>
+      <a class="navbar-brand" href="about.php">BOOKSTORE</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
         <!-- Tabs -->
-        <li><a href="bookListAvailable.php">Verfügbare Bücher</a></li>
+        <li><a href="bookListAvailable.php"><?php echo $lang["NAVBAR:AVAILABLE"]; ?></a></li>
         <?php
           if ($_SESSION["username"] != "") {
-            echo '<li><a href="bookListTaken.php">Geliehene Bücher</a></li>';
+            echo '<li><a href="bookListTaken.php">' . $lang["NAVBAR:TAKEN"] . '</a></li>';
           }
         ?>
       </ul>

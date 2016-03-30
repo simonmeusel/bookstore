@@ -23,23 +23,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Book information -->
   <div class="col-sm-12 col-lg-4">
     <form action="bookAddDatabase.php" method="POST">
-      Name:
+      <?php echo $lang["BOOK:NAME"]; ?>:
       <input type="text" name="name" class="form-control" id="bookAddFormName" autofocus> <br>
-      ISBN:
+      <?php echo $lang["BOOK:ISBN"]; ?>:
       <input type="text" name="isbn" class="form-control" id="bookAddFormISBN"> <br>
-      Author:
+      <?php echo $lang["BOOK:AUTHOR"]; ?>:
       <input type="text" name="author" class="form-control" id="bookAddFormAuthor"> <br>
-      Verlag:
+      <?php echo $lang["BOOK:PUBLISHER"]; ?>:
       <input type="text" name="publisher" class="form-control" id="bookAddFormPublisher"> <br>
-      // Search for matching books (Google APIs)
+      <!-- Search for matching books (Google APIs) -->
       <button class="btn btn-warning" onclick="searchBooks()" type="button">Google books durchsuchen</button> <br> <hr>
-      Buch ID
+      <?php echo $lang["BOOK:BID"]; ?>:
       <input type="text" name="bid" class="form-control" id="bookAddFormBid"> <br>
-      Spender:
+      <?php echo $lang["BOOK:GIVER"]; ?>:
       <input type="text" name="giver" class="form-control" id="bookAddFormGiver"> <br>
-      Fachgebiet:
+      <?php echo $lang["BOOK:FIELD"]; ?>:
       <input type="text" name="field" class="form-control" id="bookAddFormField"> <br>
-      Veröffentlichung:
+      <?php echo $lang["BOOK:PUBLISHINGDATE"]; ?>:
   		<div class="form-group">
   			<div class='input-group date' id='datetimepicker3'>
   				<input type='text' class="form-control" name="publishingdate" id="bookAddFormPublishingdate">
@@ -48,11 +48,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   				</span>
   			</div>
   		</div> <br>
-      Preis:
+      <?php echo $lang["BOOK:PRICE"]; ?>:
       <input type="text" name="price" class="form-control" id="bookAddFormPrice"> <br>
-      Notiz:
+      <?php echo $lang["BOOK:MESSAGE"]; ?>:
       <input type="text" name="message" class="form-control" id="bookAddFormMessage"> <br>
-      <button class="btn btn-primary" action="submit">Buch hinzufügen</button>
+      <button class="btn btn-primary" action="submit"><?php echo $lang["BOOK_ADD:ADD"]; ?>:</button>
     </form>
   </div>
   <!-- Google API Auto complete-->
@@ -60,16 +60,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Search results-->
     <h2>
       <span class="glyphicon glyphicon-search"></span>
-      <span id="bookCount">0 Bücher gefunden</span>
+      <span id="bookCount"></span>
     </h2>
 
     <table class="table table-hover">
       <!-- Table header -->
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Author</th>
-          <th>ISBN</th>
+          <th><?php echo $lang["BOOK:NAME"]; ?></th>
+          <th><?php echo $lang["BOOK:AUTHOR"]; ?></th>
+          <th><?php echo $lang["BOOK:ISBN"]; ?></th>
         </tr>
       </thead>
       <!-- Table body -->

@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <div class="col-sm-12">
     <noscript>
       <div class="alert alert-danger alert-dismissible" role="alert">
-        Dein Browser unterstützt kein Java-Script! <a href="" class="alert-link">Mehr dazu ...</a>
+        <?php echo $lang["NOSCRIPT:NOSUPPORT"]; ?><a href="" class="alert-link"><?php echo $lang["NOSCRIPT:MORE"]; ?>...</a>
       </div>
     </noscript>
   </div>

@@ -24,10 +24,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <a href="about.php">BookStore</a>
       </div>
       <div class="col-sm-4">
-        <a href="https://github.com/simonmeusel">Created by Simon Meusel</a>
+        <a href="https://github.com/simonmeusel"><?php echo $lang["FOOTER:CREATED"]; ?></a>
       </div>
       <div class="col-sm-4">
-        <a>Click to go to top</a>
+        <a><?php echo $lang["FOOTER:GOTOP"]; ?></a>
       </div>
     </div>
   </div>

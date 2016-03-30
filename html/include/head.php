@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <head>
   <meta charset="utf-8">
 
-  <title>BookStore</title>
+  <title><?php $lang["PAGE_TITLE"] ?></title>
 
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">

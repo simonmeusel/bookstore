@@ -16,32 +16,17 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 
-<!-- Datepicker Popup-->
-<div id='datepickerModal' class='modal fade' role='dialog'>
-  <div class='modal-dialog modal-sm'>
-    <div class='modal-content'>
-      <div class='modal-header'>
-        <button type='button' class='close' data-dismiss='modal'>&times;</button>
-        <h4 class='modal-title'>Datum eingeben?</h4>
-      </div>
-      <div class='modal-body'>
-        <?php include ("include/datepicker.php"); ?>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Delete Popup-->
 <div id='deleteModal' class='modal fade' role='dialog'>
   <div class='modal-dialog modal-sm'>
     <div class='modal-content'>
       <div class='modal-header'>
         <button type='button' class='close' data-dismiss='modal'>&times;</button>
-        <h4 class='modal-title'>Wirklich löschen?</h4>
+        <h4 class='modal-title'><?php echo $lang["MODAL:CONFIRMDELETE"]; ?></h4>
       </div>
       <div class='modal-body'>
-        <button class='btn btn-default' data-dismiss='modal' autofocus>Abbrechen</button>
-        <button class='btn btn-danger' onclick='deleteBookDB()'>Löschen</button>
+        <button class='btn btn-danger' onclick='deleteBookDB()'><?php echo $lang["MODAL:DELETE"]; ?></button>
+          <button class='btn btn-default' data-dismiss='modal' autofocus><?php echo $lang["MODAL:CANCEL"]; ?></button>
       </div>
     </div>
   </div>
@@ -53,16 +38,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <div class='modal-content'>
       <div class='modal-header'>
         <button type='button' class='close' data-dismiss='modal'>&times;</button>
-        <h4 class='modal-title'>Logge dich ein!</h4>
+        <h4 class='modal-title'><?php echo $lang["MODAL:LOGIN"]; ?></h4>
       </div>
       <div class='modal-body'>
         <form  action='userLogin.php' method='POST'>
           <div class='form-group'>
-            Benutzer:<input type='text' name='username' class='form-control' autofocus>
+            <?php echo $lang["MODAL:USERNAME"]; ?>:<input type='text' name='username' class='form-control' autofocus>
             <br>
-            Passwort:<input type='password' name='password' class='form-control'>
+            <?php echo $lang["MODAL:PASSWORD"]; ?>:<input type='password' name='password' class='form-control'>
           </div>
-          <button type='submit' class='btn btn-default'>Einloggen</button>
+          <button type='submit' class='btn btn-default'><?php echo $lang["MODAL:LOGIN"]; ?></button>
         </form>
       </div>
     </div>
@@ -75,11 +60,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <div class='modal-content'>
       <div class='modal-header'>
         <button type='button' class='close' data-dismiss='modal'>&times;</button>
-        <h4 class='modal-title'>Logge dich aus!</h4>
+        <h4 class='modal-title'><?php echo $lang["MODAL:LOGOUT"]; ?></h4>
       </div>
       <div class='modal-body'>
         <form  action='userLogout.php' method='POST'>
-          <button type='submit' class='btn btn-default' autofocus>Ausloggen</button>
+          <button type='submit' class='btn btn-default' autofocus><?php echo $lang["MODAL:LOGOUT"]; ?></button>
         </form>
       </div>
     </div>

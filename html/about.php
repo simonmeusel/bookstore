@@ -38,10 +38,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.
   <hr>
-  Wenn du mehr Informationen über dieses Projekt haben willst,
-  oder du dir den Quellcode anschauen willst,
-  kannst du auf GitHub vorbeischauen:
-  <a href="https://github.com/simonmeusel/bookstore">BookStore auf GitHub</a>
+  <h3>
+    <?php echo $lang["ABOUT:INFO"]; ?>
+    <br>
+    <a href="https://github.com/simonmeusel/bookstore"><?php echo $lang["ABOUT:LINK"]; ?></a>
+  </h3>
 </p>
 <br>
 
