@@ -16,12 +16,14 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*
 body {
     background: rgb(203, 203, 203);
     background-image: url('../logo.svg');
     background-repeat: no-repeat;
     background-size: 100%;
 }
+*/
 
 .unselectable {
     -webkit-touch-callout: none;

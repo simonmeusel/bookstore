@@ -30,6 +30,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   while ($row = mysql_fetch_assoc($query)) {
     // Basic Info
+    // Book id
+    $bid = $row["bid"];
+    echo "<div class=\"panel panel-default\">
+    <div class=\"panel-heading\">Name</div>
+    <div class=\"panel-body\">
+    $bid
+    </div>
+    </div>";
     // Name
     $name = $row["name"];
     echo "<div class=\"panel panel-default\">
@@ -97,6 +105,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       $giver
       </div>
       </div>";
+      // Edit
+      echo "
+      <form action='bookEdit.php' method='POST'>
+        <input type='hidden' name='id' value='$id'>
+        <button action='submit' class='btn btn-warning'>Buchinformationen bearbeiten</button>
+      </form>
+      <hr>
+      ";
       // Debug info
       echo '<div onclick="toggleHide()" class="alert alert-danger alert-dismissible" role="alert">';
       echo 'Du siehst hier Debug-Informationen. Sie können dem System-Administrator helfen, Probleme zu lösen. <div id="hide"> <hr>';
