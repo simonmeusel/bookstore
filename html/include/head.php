@@ -22,6 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <title><?php $lang["PAGE_TITLE"] ?></title>
 
   <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
