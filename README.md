@@ -3,14 +3,15 @@
 
 ## Features
   - Responsive website design with Bootstrap
-  - Search for book (by author, title and publisher)
+  - Book autocomplete feature (Google Book API)
   - Lend as many books as you want
   - Works with Lamp stack (Apache, Php, MySQL)
   - Database example ready to import via PhpMyAdmin
   - Create diffrent users
-  - Language support: german !!!
+  - Easy to add new languages
+  - Works with most browsers
   - Easy to configure and install
-  - 100% free
+  - 100% free and open source
 
 ## Installation
   1. Put the html folder into the htdocs folder of your Apache server
