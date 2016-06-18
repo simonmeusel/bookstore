@@ -18,7 +18,37 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 var book;
 
+// Animation
+function startAnimation() {
+  stopAnimation();
+  var amount = Math.floor($(window).width() / 100);
+  var parent = document.getElementById("load");
+  var loadScreen = document.createElement("div");
+  loadScreen.className = "loadScreen";
+  parent.appendChild(loadScreen);
+  for (var i = 0; i < amount; i++) {
+    var child = document.createElement("div");
+    child.className = "loadSquare";
+    child.style.animation = "loadSquare " + (Math.random() / 2 + 0.5) + "s linear infinite";
+    child.style.opacity = Math.random();
+    child.style.width = (100 / amount) + "%";
+    child.style.marginLeft = (100 / amount * i) + "%";
+    loadScreen.appendChild(child);
+  }
+  var child = document.createElement("div");
+  child.innerHTML = "Buchinformationen werden geladen";
+  child.className = "loadText";
+  loadScreen.appendChild(child);
+}
+
+function stopAnimation() {
+  $("#load").empty();
+}
+
 function searchBooks () {
+
+  startAnimation();
+
   // Search criterias
   var search = "";
 
@@ -54,6 +84,9 @@ function searchBooks () {
   xhttp.open("POST", "bookGoogleAPI.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4) {
+      stopAnimation();
+    }
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var jsonData = xhttp.responseText.substring(xhttp.responseText.indexOf("{"));
       console.log(jsonData);

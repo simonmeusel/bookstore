@@ -18,37 +18,75 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /*
 body {
-    background: rgb(203, 203, 203);
-    background-image: url('../logo.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+background: rgb(203, 203, 203);
+background-image: url('../logo.svg');
+background-repeat: no-repeat;
+background-size: 100%;
 }
 */
 
 .unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 footer {
-	background: rgba(0,0,0,0.7);
-	color: #eee;
-	font-size: 11px;
-	padding: 20px;
+  background: rgba(0,0,0,0.7);
+  color: #eee;
+  font-size: 11px;
+  padding: 20px;
 }
 
 .toppadding {
-	padding-top: 70px;
+  padding-top: 70px;
 }
 
 .li-padding {
-	padding-top: 10px;
+  padding-top: 10px;
 }
 
 #hide {
-	display: none;
+  display: none;
+}
+
+@keyframes loadSquare {
+  0% {
+    height: 0%;
+  }
+  70% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+.loadScreen {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  width: 100%;
+  height: 1600px;
+}
+
+.loadSquare {
+  height: 100%;
+  background: #000;
+  position: fixed;
+}
+
+.loadText {
+  text-align: center;
+  position: fixed;
+  font-size: 10vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  color: rgb(255, 255, 255);
+  opacity: 1.0;
 }
