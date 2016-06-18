@@ -13,10 +13,13 @@
   - Easy to configure and install
   - 100% free and open source
 
+## Download
+You can find the download under releases: https://github.com/simonmeusel/bookstore/releases
+
 ## Installation
   1. Put the html folder into the htdocs folder of your Apache server
   2. Adjust the settings in include/settings.php (MySQL pass...)
-  3. Include the database/bookstore.sql into your MySQL database
+  3. Include the bookstore.sql into your MySQL database
     1. Download PhpMyAdmin
     2. Extract and put it into the htdocs folder of your Apache server
     3. Browse to PhpMyAdmin and login
