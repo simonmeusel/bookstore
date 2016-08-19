@@ -21,8 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Check account
 if ($_SESSION["username"] != "") {
   //Recieve Post request
-  $deadline = $_POST['deadline'];
-  $took = $_POST['took'];
+  mysql_real_escape_string($deadline = $_POST['deadline']);
+  mysql_real_escape_string($took = $_POST['took']);
 
   // Connect to MySQL database
   $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");

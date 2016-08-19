@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   // Username of MySQL user with read and write permissions at database bookstore
   $mysqlUsername = "root";
   // Password of MySQL user with read and write permissions at database bookstore
-  $mysqlPassword = "";
+  $mysqlPassword = "gof82";
 }
 
 { // Google Book API

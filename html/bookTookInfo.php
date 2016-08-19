@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <!-- Took information -->
   <?php
   if ($_SESSION["username"] != "") {
-    $id = $_POST["id"];
+    $id = mysql_real_escape_string($_POST["id"]);
     $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
     mysql_select_db("BookStore") or die("Table BookStore does not exist!");
 

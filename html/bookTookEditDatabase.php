@@ -21,10 +21,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Check account
 if ($_SESSION["username"] != "") {
   //Recieve Post request
-  $id = $_POST['id'];
-  $name = $_POST['name'];
-  $class = $_POST['class'];
-  $notice = $_POST['notice'];
+  $id = mysql_real_escape_string($_POST['id']);
+  $name = mysql_real_escape_string($_POST['name']);
+  $class = mysql_real_escape_string($_POST['class']);
+  $notice = mysql_real_escape_string($_POST['notice']);
 
   // Connect to MySQL database
   $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");

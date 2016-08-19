@@ -21,17 +21,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Check account
 if ($_SESSION["username"] != "") {
   //Recieve Post request
-  $id = $_POST['id'];
-  $bid = $_POST['bid'];
-  $name = $_POST['name'];
-  $isbn =  $_POST['isbn'];
-  $author = $_POST['author'];
-  $message = $_POST['message'];
-  $publisher = $_POST['publisher'];
-  $giver = $_POST['giver'];
-  $field = $_POST['field'];
-  $publishingdate = $_POST['publishingdate'];
-  $price = $_POST['price'];
+  $id = mysql_real_escape_string($_POST['id']);
+  $bid = mysql_real_escape_string($_POST['bid']);
+  $name = mysql_real_escape_string($_POST['name']);
+  $isbn =  mysql_real_escape_string($_POST['isbn']);
+  $author = mysql_real_escape_string($_POST['author']);
+  $message = mysql_real_escape_string($_POST['message']);
+  $publisher = mysql_real_escape_string($_POST['publisher']);
+  $giver = mysql_real_escape_string($_POST['giver']);
+  $field = mysql_real_escape_string($_POST['field']);
+  $publishingdate = mysql_real_escape_string($_POST['publishingdate']);
+  $price = mysql_real_escape_string($_POST['price']);
 
   // Connect to MySQL database
   $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");

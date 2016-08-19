@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <?php include ("include/init.php");
 
 if ($_SESSION['username'] != "") {
-  $id = $_POST['id'];
+  $id = mysql_real_escape_string($_POST['id']);
   echo "ID: $id ";
 
   // Connect to MySQL database
