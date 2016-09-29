@@ -1,8 +1,6 @@
 # bookstore
   Library management software
 
-# bookstore is INSECURE. It is vulnerable for SQL Injection.
-
 ## Features
   - Responsive website design with Bootstrap
   - Book autocomplete feature (Google Book API)
@@ -60,3 +58,5 @@ You can find the download under releases: https://github.com/simonmeusel/booksto
 ## Screenshot
   
   ![alt text](https://github.com/simonmeusel/bookstore/blob/master/image/bookstoreBanner.PNG)
+
+#### bookstore should be secure by now, but I'not guaranteeing!!!
