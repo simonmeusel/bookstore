@@ -25,9 +25,9 @@ if ($_SESSION["username"] != "") {
   $took = $_POST['took'];
 
   // Connect to MySQL database
-  $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
+  $connect = mysqli_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
   // Select batabase
-  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+  mysqli_select_db($connect, "BookStore") or die("Table BookStore does not exist!");
 
   // Get old extensions
   $query = "SELECT extensions FROM took WHERE id = $took";

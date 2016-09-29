@@ -27,9 +27,9 @@ if ($_SESSION["username"] != "") {
   $book = $_POST['book'];
 
   // Connect to MySQL database
-  $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
+  $connect = mysqli_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
   // Select batabase
-  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+  mysqli_select_db($connect, "BookStore") or die("Table BookStore does not exist!");
 
   // Add book to database
   $sql = "INSERT INTO took (name, date, deadline, class, book)

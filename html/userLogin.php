@@ -21,11 +21,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
-mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+$connect = mysqli_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
+mysqli_select_db($connect, "BookStore") or die("Table BookStore does not exist!");
 
-$query = mysql_query("SELECT * FROM user WHERE name='$username' AND password='$password'");
-if (mysql_num_rows($query) == 1) {
+$query = mysqli_query($connect, "SELECT * FROM user WHERE name='$username' AND password='$password'");
+if (mysqli_num_rows($query) == 1) {
   $_SESSION["username"] = $username;
 }
 ?>

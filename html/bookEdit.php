@@ -27,8 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     echo "<form action='bookEditDatabase.php' method='POST'>";
 
     $id = $_POST["id"];
-    $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
-    mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+    $connect = mysqli_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
+    mysqli_select_db($connect, "BookStore") or die("Table BookStore does not exist!");
 
     $query = mysql_query("SELECT * FROM book WHERE id=$id");
 

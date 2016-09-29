@@ -34,16 +34,16 @@ if ($_SESSION["username"] != "") {
   $price = $_POST['price'];
 
   // Connect to MySQL database
-  $connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
+  $connect = mysqli_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
   // Select batabase
-  mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+  mysqli_select_db($connect, "BookStore") or die("Table BookStore does not exist!");
 
   // Add book to database
   $sql = "INSERT INTO book (bid, name, isbn, author, message, date, publisher, giver, field, publishingdate, price, taken)
   VALUES ('$bid', '$name', '$isbn', '$author', '$message', NOW(), '$publisher', '$giver', '$field', '$publishingdate', '$price', 0)";
 
   // Run command
-  $response = mysql_query($sql, $connect);
+  $response = mysqli_query($connect, $sql);
 }
 
 ?>

@@ -32,14 +32,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	<!-- Table body -->
 	<tbody>
 		<?php
-		$connect = mysql_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
-		mysql_select_db("BookStore") or die("Table BookStore does not exist!");
+		$connect = mysqli_connect("localhost", "$mysqlUsername", "$mysqlPassword") or die("Could not connect to database!");
+		mysqli_select_db($connect, "BookStore") or die("Table BookStore does not exist!");
 
 		// Book has to be availible
-		$query = mysql_query("SELECT * FROM book WHERE hidden=false");
+		$query = mysqli_query($connect, "SELECT * FROM book WHERE hidden=false");
 
 		// Add all books to table
-		while ($row = mysql_fetch_assoc($query)) {
+		while ($row = mysqli_fetch_assoc($query)) {
 			$id = $row["id"];
 			$bookname = $row["name"];
 			$bookauthor = $row["author"];
