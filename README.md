@@ -1,4 +1,6 @@
 # bookstore
+  > 🚨 This project is no longer maintained and thus most likely has many security vulnerabilities. Do not use it in production.
+  
   Library management software
 
 ## Features
