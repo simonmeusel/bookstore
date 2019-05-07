@@ -15,7 +15,7 @@
   - Easy to configure and install
 
 ## Download
-You can find the download under releases: https://github.com/simonmeusel/bookstore/releases
+  You can find the download [here](https://github.com/simonmeusel/bookstore/releases).
 
 ## Installation
   1. Put the html folder into the htdocs folder of your Apache server
@@ -60,5 +60,3 @@ You can find the download under releases: https://github.com/simonmeusel/booksto
 ## Screenshot
   
   ![alt text](https://github.com/simonmeusel/bookstore/blob/master/image/bookstoreBanner.PNG)
-
-#### bookstore should be secure by now, but I'not guaranteeing!!!
